@@ -77,7 +77,7 @@ def home_page() -> rx.Component:
                     rx.text(
                         "I'm a Data and AI Consultant at Deloitte with expertise in building scalable AI solutions, "
                         "implementing advanced NLP systems, and driving data-driven decision making. With experience "
-                        "working with Fortune 500 clients across Australia, I specialize in RAG systems, "
+                        "working with ASX 200 clients across Australia, I specialize in RAG systems, "
                         "autonomous AI agents, and cloud technologies.",
                         font_size="1.1rem",
                         color=COLORS["text_secondary"],
@@ -97,9 +97,9 @@ def home_page() -> rx.Component:
                         rx.box(
                             rx.vstack(
                                 rx.hstack(
-                                    rx.heading("B.Tech in Computer Science", size="5", color=COLORS["primary"]),
+                                    rx.heading("Masters in Data Science and Innovation", size="5", color=COLORS["primary"]),
                                     rx.spacer(),
-                                    rx.text("2017 - 2021", color=COLORS["text_secondary"], font_weight="500"),
+                                    rx.text("2023 - 2025", color=COLORS["text_secondary"], font_weight="500"),
                                     width="100%",
                                     align="center",
                                 ),
