@@ -104,12 +104,12 @@ def home_page() -> rx.Component:
                                     align="center",
                                 ),
                                 rx.text(
-                                    "Vellore Institute of Technology",
+                                    "University of Technology Sydney",
                                     font_size="1.1rem",
                                     color=COLORS["text_secondary"],
                                 ),
                                 rx.text(
-                                    "CGPA: 8.64/10",
+                                    "CGPA: 6.11/7",
                                     color=COLORS["text_secondary"],
                                 ),
                                 spacing="2",
