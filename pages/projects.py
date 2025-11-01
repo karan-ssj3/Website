@@ -124,8 +124,8 @@ def projects_page() -> rx.Component:
                 # Projects Grid
                 rx.grid(
                     *[project_card(project) for project in PROJECTS],
-                    columns="3",
-                    spacing="6",
+                    columns=["1", "1", "2", "3"],
+                    spacing=["4", "4", "5", "6"],
                     width="100%",
                 ),
                 
@@ -133,7 +133,7 @@ def projects_page() -> rx.Component:
                 align="center",
             ),
             max_width="1200px",
-            padding=SPACING["lg"],
+            padding=["1rem", "1.5rem", SPACING["lg"]],
             margin="0 auto",
             width="100%",
         ),

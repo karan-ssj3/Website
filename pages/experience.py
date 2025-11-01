@@ -125,7 +125,7 @@ def experience_page() -> rx.Component:
                 align="center",
             ),
             max_width="1200px",
-            padding=SPACING["lg"],
+            padding=["1rem", "1.5rem", SPACING["lg"]],
             margin="0 auto",
             width="100%",
         ),
