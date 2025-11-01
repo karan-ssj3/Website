@@ -1,0 +1,66 @@
+/* Responsive styles for mobile optimization */
+
+/* Mobile-first: Single column grid by default */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Mobile buttons - full width on small screens */
+.mobile-responsive-buttons {
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mobile-responsive-buttons {
+    flex-direction: row;
+  }
+}
+
+.mobile-button,
+.mobile-button-link {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mobile-button,
+  .mobile-button-link {
+    width: auto;
+  }
+}
+
+/* Responsive padding */
+.responsive-padding {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .responsive-padding {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-padding {
+    padding: 2rem;
+  }
+}
+
