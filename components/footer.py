@@ -1,45 +1,84 @@
 # components/footer.py
 import reflex as rx
-from styles.theme import COLORS
+
 
 def footer() -> rx.Component:
     return rx.box(
-        rx.vstack(
-            rx.divider(border_color=COLORS["border"]),
+        rx.box(
+            height="1px",
+            background="linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.3), rgba(168, 85, 247, 0.3), transparent)",
+        ),
+        rx.box(
             rx.hstack(
-                rx.text(
-                    "© 2025 Karan Bhutani. All rights reserved.",
-                    color=COLORS["text_secondary"],
-                    font_size="0.9rem",
+                # Left — copyright + tagline
+                rx.vstack(
+                    rx.text(
+                        "© 2025 Karan Bhutani",
+                        color="rgba(148, 163, 184, 0.6)",
+                        font_family="'JetBrains Mono', monospace",
+                        font_size="0.78rem",
+                        letter_spacing="1px",
+                    ),
+                    rx.text(
+                        "Building the future with AI & Data",
+                        color="rgba(0, 245, 255, 0.35)",
+                        font_family="'JetBrains Mono', monospace",
+                        font_size="0.72rem",
+                        letter_spacing="0.5px",
+                    ),
+                    spacing="1",
+                    align_items="start",
                 ),
+
                 rx.spacer(),
+
+                # Right — social links
                 rx.hstack(
                     rx.link(
-                        "GitHub",
+                        rx.text(
+                            "GitHub",
+                            class_name="cyber-nav-link",
+                            font_size="0.8rem",
+                        ),
                         href="https://github.com/karanbhutani",
-                        color=COLORS["primary"],
                         is_external=True,
+                        text_decoration="none",
                     ),
+                    rx.text("·", color="rgba(0, 245, 255, 0.25)", font_size="0.8rem"),
                     rx.link(
-                        "LinkedIn",
+                        rx.text(
+                            "LinkedIn",
+                            class_name="cyber-nav-link",
+                            font_size="0.8rem",
+                        ),
                         href="https://www.linkedin.com/in/karan-bhutani/",
-                        color=COLORS["primary"],
                         is_external=True,
+                        text_decoration="none",
                     ),
+                    rx.text("·", color="rgba(0, 245, 255, 0.25)", font_size="0.8rem"),
                     rx.link(
-                        "Medium",
+                        rx.text(
+                            "Medium",
+                            class_name="cyber-nav-link",
+                            font_size="0.8rem",
+                        ),
                         href="https://medium.com/@karanbhutani477",
-                        color=COLORS["primary"],
                         is_external=True,
+                        text_decoration="none",
                     ),
-                    spacing="4",
+                    spacing="3",
+                    align="center",
                 ),
+
                 width="100%",
                 align="center",
+                flex_wrap="wrap",
+                gap="1rem",
             ),
-            padding="2rem",
-            spacing="3",
+            max_width="1200px",
+            margin="0 auto",
+            padding="1.8rem 2rem",
         ),
-        background=COLORS["surface"],
-        margin_top="4rem",
+        class_name="cyber-footer",
+        margin_top="5rem",
     )

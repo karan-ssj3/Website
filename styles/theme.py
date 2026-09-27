@@ -1,48 +1,41 @@
-# styles/theme.py
+# styles/theme.py — Cyberpunk / Futuristic Theme
 
-# Color palette for the portfolio website
 COLORS = {
-    # Primary colors
-    "primary": "#3B82F6",  # Blue
-    "primary_hover": "#2563EB",  # Darker blue
-    "secondary": "#64748B",  # Slate
-    
-    # Background colors
-    "background": "#FFFFFF",  # White
-    "surface": "#F8FAFC",  # Light gray
-    "surface_hover": "#F1F5F9",  # Slightly darker gray
-    
-    # Text colors
-    "text_primary": "#1E293B",  # Dark slate
-    "text_secondary": "#64748B",  # Medium slate
-    "text_muted": "#94A3B8",  # Light slate
-    
-    # Accent colors
-    "accent": "#10B981",  # Emerald green
-    "accent_hover": "#059669",  # Darker emerald
-    "warning": "#F59E0B",  # Amber
-    "error": "#EF4444",  # Red
-    
-    # Border colors
-    "border": "#E2E8F0",  # Light gray border
-    "border_hover": "#CBD5E1",  # Medium gray border
-    
-    # Dark mode colors
-    "dark_background": "#0F172A",  # Dark slate
-    "dark_surface": "#1E293B",  # Medium dark slate
-    "dark_text_primary": "#F8FAFC",  # Light text
-    "dark_text_secondary": "#CBD5E1",  # Medium light text
-    "dark_border": "#334155",  # Dark border
+    # Neon primaries
+    "primary": "#00f5ff",           # Neon cyan
+    "primary_hover": "#00ccdd",
+    "secondary": "#a855f7",         # Neon purple
+    "accent": "#ff00ff",            # Neon magenta
+    "accent_green": "#00ff88",      # Neon green
+
+    # Backgrounds
+    "background": "#050510",        # Deep space
+    "surface": "rgba(10, 15, 40, 0.75)",
+    "surface_solid": "#0a0f28",
+    "surface_hover": "rgba(15, 20, 55, 0.9)",
+
+    # Text
+    "text_primary": "#e2e8f0",
+    "text_secondary": "#94a3b8",
+    "text_muted": "#475569",
+
+    # Borders
+    "border": "rgba(0, 245, 255, 0.15)",
+    "border_hover": "rgba(0, 245, 255, 0.5)",
+    "border_secondary": "rgba(168, 85, 247, 0.25)",
+
+    # Status
+    "error": "#ff4444",
+    "warning": "#ffaa00",
+    "success": "#00ff88",
 }
 
-# Typography
 FONTS = {
     "heading": "Inter, system-ui, sans-serif",
     "body": "Inter, system-ui, sans-serif",
-    "mono": "JetBrains Mono, monospace",
+    "mono": "'JetBrains Mono', 'Fira Code', monospace",
 }
 
-# Spacing scale
 SPACING = {
     "xs": "0.25rem",
     "sm": "0.5rem",
@@ -53,19 +46,17 @@ SPACING = {
     "3xl": "4rem",
 }
 
-# Border radius
 RADIUS = {
-    "sm": "0.25rem",
-    "md": "0.5rem",
-    "lg": "0.75rem",
-    "xl": "1rem",
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
     "full": "9999px",
 }
 
-# Shadows
 SHADOWS = {
-    "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-    "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
-    "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
-    "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+    "glow_cyan": "0 0 10px rgba(0, 245, 255, 0.4), 0 0 30px rgba(0, 245, 255, 0.15)",
+    "glow_purple": "0 0 10px rgba(168, 85, 247, 0.4), 0 0 30px rgba(168, 85, 247, 0.15)",
+    "glow_magenta": "0 0 10px rgba(255, 0, 255, 0.4), 0 0 30px rgba(255, 0, 255, 0.15)",
+    "card": "0 8px 32px rgba(0, 0, 0, 0.4)",
 }

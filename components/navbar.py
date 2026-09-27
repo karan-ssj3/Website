@@ -1,69 +1,51 @@
 # components/navbar.py
 import reflex as rx
-from styles.theme import COLORS
+
 
 def navbar() -> rx.Component:
     return rx.box(
         rx.hstack(
-            # Logo/Name
+            # Logo
             rx.link(
-                rx.heading(
-                    "Karan Bhutani", 
-                    size="6",
-                    color=COLORS["primary"],
+                rx.hstack(
+                    rx.text(
+                        "KB",
+                        class_name="cyber-logo-text",
+                    ),
+                    rx.text(
+                        "// Karan Bhutani",
+                        color="rgba(148, 163, 184, 0.6)",
+                        font_family="'JetBrains Mono', monospace",
+                        font_size="0.8rem",
+                        letter_spacing="1px",
+                        display=["none", "none", "block"],
+                    ),
+                    spacing="2",
+                    align="center",
                 ),
                 href="/",
                 text_decoration="none",
             ),
-            
+
             rx.spacer(),
-            
-            # Navigation Links
+
+            # Nav links
             rx.hstack(
-                rx.link(
-                    "Home", 
-                    href="/", 
-                    color=COLORS["text_primary"], 
-                    font_weight="500",
-                ),
-                rx.link(
-                    "Projects", 
-                    href="/projects", 
-                    color=COLORS["text_primary"], 
-                    font_weight="500",
-                ),
-                rx.link(
-                    "Experience", 
-                    href="/experience", 
-                    color=COLORS["text_primary"], 
-                    font_weight="500",
-                ),
-                rx.link(
-                    "Blog", 
-                    href="/blog", 
-                    color=COLORS["text_primary"], 
-                    font_weight="500",
-                ),
-                rx.link(
-                    "Contact", 
-                    href="/contact", 
-                    color=COLORS["text_primary"], 
-                    font_weight="500",
-                ),
-                spacing="4",
+                rx.link("Home",       href="/",           class_name="cyber-nav-link"),
+                rx.link("Projects",   href="/projects",   class_name="cyber-nav-link"),
+                rx.link("Experience", href="/experience", class_name="cyber-nav-link"),
+                rx.link("Blog",       href="/blog",       class_name="cyber-nav-link"),
+                rx.link("Contact",    href="/contact",    class_name="cyber-nav-link"),
+                spacing="6",
                 flex_wrap="wrap",
             ),
-            
+
             width="100%",
             align="center",
-            padding="1.5rem",
-            class_name="responsive-padding",
-            flex_wrap="wrap",
+            padding="1.1rem 2rem",
         ),
-        background=COLORS["surface"],
-        border_bottom=f"1px solid {COLORS['border']}",
+        class_name="cyber-navbar",
         position="sticky",
         top="0",
         z_index="999",
-        box_shadow="sm",
     )
